@@ -1,0 +1,215 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    
+}
+
+header {
+    width: 100%;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo img {
+    height: 170px;
+    margin-right: 20px ;
+}
+
+.contact-info {
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.contact-info p {
+    margin: 0 20px;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 25px;
+    margin-left: 50px;
+}
+
+.icon {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+nav {
+    
+    border-radius: 5px;
+    padding: 6px 8px;
+    margin-left: -380px;
+    margin-right: 0px;
+    margin-top: 30px;
+
+    background-color: #002f6c;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 50px;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #014a9f;
+}
+
+.emi-calculator {
+    background-color: #f8f8f8;
+    color: #002f6c;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-left: 20px;
+}
+
+.emi-calculator:hover {
+    background-color: #ddd;
+}
+
+
+
+/*Credit card Portion*/
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.credit-score {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.credit-score h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.step {
+    text-align: center;
+    margin: 0 20px;
+    padding-right: 20px;
+}
+
+.step .icon {
+    font-size: 50px;
+    color: #002f6c;
+    margin-bottom: 10px;
+}
+
+.step h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.step p {
+    font-size: 14px;
+    color: #666;
+}
+
+.cta-text {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.cta-button {
+    background-color: #002f6c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #014a9f;
+}
+
+/*Banking=--*/
+.bank-offers{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1px ;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin: 50px; 
+    }
+.offer{
+    border: 2px solid #002f6c;
+    border-radius: 10px;
+    padding: 14px;
+    max-width: 300px;
+    text-align: left;
+}
+.offer img{
+   max-width: 100%;
+   height: auto;
+   margin-bottom: 7px;
+
+}
+.offer h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.offer p{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.offer ul{
+    list-style: none;
+    padding: 0;;
+    margin-bottom: 10px;
+}
+.offer ul li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.offer ul li i{
+    color: green;
+    margin-left: 10px;
+}
+.offer button{
+    background-color: #002f6c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 120px;
+    cursor: pointer;
+    padding-right: 115px;
+    
+
+}
+.offer button:hover{
+    background-color: #014a9f;
+}

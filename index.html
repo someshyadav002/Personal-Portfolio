@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Somesh's Portfolio</title>
+	<link rel="stylesheet"  href="style.css">
+	<link rel="icon"  href="D:\orignalcopy's\Personal Portfolio\images\logo2.jpg" type="image/x-icon" ><!--icon  -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     <link rel="stylesheet" href="path-to-your-local-corui-folder/corui.css">
+</head>
+<body>
+	<div id="header">
+		<div id="container">
+			<nav>
+				<img src="D:\orignalcopy's\Personal Portfolio\images\logo2.jpg" alt="logo">
+				<ul id="sidemenu">
+					<li><a href="#header">Home</a>
+					</li>
+					<li><a href="#about">About</a>
+					</li>
+					<li><a href="#services">Services</a>
+					</li>
+					<li><a href="#portfolio">Portfolio</a>
+					</li>
+					<li><a href="#contact">Contact us</a>
+					</li>
+					<i class="fas fa-times" onclick="closemenu()"></i>
+				</ul>
+				<i class="fas fa-bars" onclick="openmenu()"></i>
+			</nav>
+			<div class="header-text">
+				<p> Web / Java Developer</p>
+				<h1>Hi, I'm <span><em>Somesh</em></span><br>Yadav From India</h1>
+			</div>
+		</div>
+	</div>
+	<!-- -------About section---->
+	<div id="about">
+		<div class="container">
+			<div class="row">
+				<div class="about-col-1">
+					<a href="#"><img src="D:\orignalcopy's\Personal Portfolio\images\cartoon.avif" alt="cartoon" border="0"></a>
+				</div>
+				<div class="about-col-2">
+					<h1 class="sub-title">About Me</h1>
+					<p>Dedicated B.Tech student specializing in Software Developer skilled C/C++, Java, DSA,
+Bootstrap, MySQL . I gained hands-on experience in both front-end and JAVA
+technologies, contributing to the successful delivery of several projects. My skills in
+JavaScript, HTML/CSS, and SQL. I am eager to leverage my
+technical skills and academic knowledge in a challenging role where I can continue to learn
+and grow as a developer.</p>
+                <div class="tab-titles">
+                	<p class="tab-links  active-link" onclick="opentab('skills')">Skills</p>
+                	<p class="tab-links" onclick="opentab('experience')">Experience</p>
+                	<p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents acitve-tab" id="skills">
+                	<ul>
+                	<li><span>Web Design</span><br>Desining Web app Interfaces</li>
+                	<li><span>Web Development</span><br>Web app Development</li>
+                	<li><span>Java Development</span><br>Java Programming</li>
+                </ul>
+            </div>
+
+                <div class="tab-contents" id="experience">
+                	<ul>
+                	<li><span>jun 2023 - Dec 2023</span><br>Internship At Amstech</li>
+                	<li><span>jun 2023 - jun 2024</span><br>Web Development Training</li>
+                	<li><span>Dec 2022 - Dec 2022</span><br>Java Training Test From IESIPS Indore</li>
+                </ul>
+            </div>
+
+                <div class="tab-contents" id="education">
+                	<ul>
+                	<li><span>2019</span><br>10th From Govt.Ex.H.S.S. Punasa</li>
+                	<li><span>2021</span><br>12th From Govt.Ex.H.S.S. Punasa</li>
+                	<li><span>2025</span><br>B.Tech (CSE_IOT) From IES IPS Indore</li>
+                </ul>
+            </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!----Services---->
+<div id="services">
+<div class="container">
+	<hi class="sub-title">My Services</hi>
+	<div class="services-list">
+		<div>
+			<i class="fa-solid fa-code"></i>
+     <h2>Web Design</h2>
+     <p>
+As a web design service, I create visually stunning, user-friendly websites that enhance user experience, boost engagement, and ensure seamless functionality across devices and platforms.</p>
+     <a href="3">Learn more</a>
+     </div>
+     <div>
+     	<i class="fa-brands fa-html5"></i>
+     	<!--<i class="fa-brands fa-js"></i>-->
+     <h2>Web Development</h2>
+     <p>As a web development service, I build robust, scalable websites using cutting-edge technologies, ensuring high performance, security, and seamless functionality across all devices and browsers.</p>
+     <a href="3">Learn more</a>
+     </div>
+     	<div>
+     		<i class="fa-brands fa-java"></i>
+     <h2>Java Development</h2>
+     <p>As a Java development service, I create scalable, secure applications tailored to your needs, leveraging Java's robust frameworks to ensure high performance and reliability.</p>
+     <a href="3">Learn more</a>
+     </div>
+	</div>
+</div>
+</div>
+<!------Portfolio----->
+<div id="portfolio">
+	<div class="container">
+		<h1 class="sub-title">My Work</h1>
+		<div class="work-list">
+			<div class="work">
+				<img src="D:\orignalcopy's\Personal Portfolio\images\eCommerce (1).jpg" alt="work3" border="0">
+				<div class="layer">
+					<h3>E-Commerce site</h3>
+					<p>Athlete's Collection e-commerce web application for athletes to buy sports clothing</p>
+					<a href="D:\orignalcopy's\Personal Portfolio\e-commerce-orignal\index.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+				</div>
+			</div>
+			<div class="work">
+				<img src="D:\orignalcopy's\Personal Portfolio\images\calculator.jpg" alt="work2" border="0">
+	 			<div class="layer">
+				<h2>Calculator</h2>
+                   <p>This is a simple calculator built using JavaScript, HTML, and CSS. </p>
+                 <a href="D:\orignalcopy's\Personal Portfolio\Calculator\index.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+			    </div>
+		    </div>
+			<div class="work">
+				
+				 <img src="D:\orignalcopy's\Personal Portfolio\images\finance.jpg" alt="work1" border="0">
+				 <div class="layer">
+				 <h2>Finance Web</h2>
+                 <p>Currently working  for SM Finance pvt ltd</p>
+                 <a href="D:\orignalcopy's\Personal Portfolio\Finance.html\Finance.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+			</div>
+		</div>
+			<!-- part -->
+			<div class="work">
+				<img src="D:\orignalcopy's\Personal Portfolio\images\ivDrip.jpg" alt="work3" border="0">
+				<div class="layer">
+					<h3>Web for Project</h3>
+					<p>This Web application help in project to show real time data with alert system</p>
+					<a href="D:\orignalcopy's\Personal Portfolio\IV Drip Project\Project.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+				</div>
+			</div>
+			<div class="work">
+				<img src="D:\orignalcopy's\Personal Portfolio\images\malwagreen.jpg" alt="work2" border="0">
+				<div class="layer">
+				<h2>Malwa Greens Web app</h2>
+                <p>Currently working  ..This Web application basicaly for agriculture purpose Which will recommend to the farmers which crop should be planted in the fields according to the weather </p>
+                <a href="D:\orignalcopy's\Personal Portfolio\MalwaGreens\MalwaGreens002.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+			</div>
+		</div>
+			<div class="work">
+				
+				<img src="D:\orignalcopy's\Personal Portfolio\images\simonSays.jpg" alt="work1" border="0">
+				<div class="layer">
+				 <h2>Simon Says Game</h2>
+                 <p>Simon Says:- Simon Says is a memory game where players repeat sequences of colors in the correct order.</p>
+                 <a href="D:\orignalcopy's\Personal Portfolio\SimonGame\index.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+			</div>
+		</div>
+		</div>
+     <a href="#" class="btn">See more</a>
+	</div>
+</div>
+
+<!------contnect--->
+
+<div id="contact">
+	<div class="container">
+		<div class="row">
+			<div class="contact-left">
+				<h1 class="sub-tittle">Contect Me</h1>
+				<p><i class="fa-solid fa-paper-plane"></i> yadavsomesh002@gmail.com</p>
+				<p><i class="fa-solid fa-phone-volume"></i> 9754708724</p>
+				<div class="social-icons">
+					<a href="https://leetcode.com/u/somesh_ydv__36/"><i class="fa-solid fa-crosshairs"></i></a>
+
+					<a href="https://github.com/someshyadav002"><i class="fa-brands fa-github"></i></a>
+
+					<a href="t.me/someshyadav_36"><i class="fa-brands fa-telegram"></i></a>
+
+					<a href="https://www.instagram.com/somesh_ydv__36?utm_source=qr"><i class="fa-brands fa-instagram"></i></a>
+
+					<a href="youtube.com/channel/UC6g--97apq9a4EGvkNRtjPw"><i class="fa-brands fa-youtube"></i></a>
+				</div>
+				<a href="D:\Personal Portfolio\Somesh's CV.pdf" download class="btn btn2">Download CV</a>
+			</div>
+			   <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <input type="number" name="Contact" placeholder="Contact" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2"> submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+
+		</div>
+	</div>
+	<a href="#" class="top"><i class="fa-solid fa-arrow-up"></i></a>
+	<div class="copyright">
+		<p>Copyright  &copy; Somesh Yadav Portfolio </p>
+	</div>
+</div>
+
+
+
+<!----Google sheet script----->
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyEssd9-Y9R6_LTiclqisewlFyC2poDBWacNp_qIrtdas_W6av1FDvaxa2tID0J5uio7g/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+      	msg.innerHTML = "Message sent successfully"
+      	setTimeout(function(){
+          msg.innerHTML = "" 
+      	},5000)
+      	form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+<script src="app.js"></script>
+</body>
+</html>
