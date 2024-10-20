@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IV Drip Monitoring</title>
+  <style type="text/css">
+    body {
+      background-color: #F5F5F5;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .data-container {
+      display: flex;
+      justify-content: space-between;
+      width: 50%;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #FFF;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+    .data-item {
+      text-align: center;
+    }
+    .data-item h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .data-item p {
+      font-size: 48px;
+      font-weight: bold;
+      color: #6EB7FF;
+    }
+    .data-head {
+      margin: auto;
+      width: 50%;
+      text-align: center;
+      font-size: 45px;
+      font-weight: bold;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #FFF;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+    }
+    /* Bottle styles */
+    #water-bottle {
+      width: 200px;
+      height: 300px;
+      background-color: #ddd;
+      position: relative;
+      margin: 50px auto;
+    }
+    #water-level {
+      background-color: #3498db;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      transition: height 0.5s ease-in-out;
+    }
+    #alert {
+    	text-align: center;
+      font-weight: bold;
+      color: red;
+    }
+    #bottel2 {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="data-head">IV Drip Monitoring</div>
+  <div class="data-container">
+    <div class="data-item">
+      <h2>Weight</h2>
+      <p class="value" id="temperature">gram</p>
+    </div>
+
+    <div class="data-item">
+      <h2>Percentage</h2>
+      <p class="value" id="humidity">%</p>
+    </div>
+  </div>
+  <div id="water-bottle">
+    <div id="water-level"> </div>
+  </div>
+  <p id="alert">Alert at 10% and off the flow</p>
+  <p id="bottel2">
+    "Current Percentage:
+    <span id="percentage">7.33</span>
+    %
+  </p>
+  <!-- Firebase scripts -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script>
+    // Firebase configuration
+    const firebaseConfig = {
+      // Your Firebase configuration hereapiKey: "AIzaSyCUkw3NEh1b2QIjJGEH2rmNxDdg6sCfe5A",
+      authDomain: "ivdripmonitoringnew.firebaseapp.com",
+      databaseURL: "https://ivdripmonitoringnew-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "ivdripmonitoringnew",
+      storageBucket: "ivdripmonitoringnew.appspot.com",
+      messagingSenderId: "679673319291",
+      appId: "1:679673319291:web:a5249299fe9ae65d3b77de"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    // Reference to the database
+    const database = firebase.database();
+    // Reference to the data we want
+    const dataRef1 = database.ref('load_cell_data');
+    const dataRef2 = database.ref('load_cell_data');
+    // Function to update water level
+    function updateWaterLevel(percentage) {
+      const waterLevel = document.getElementById('water-level');
+      waterLevel.style.height = percentage + '%';
+      if (percentage >= 50) {
+        document.getElementById('alert').innerText = "Green light on. Next Alert at 50%";
+        waterLevel.style.backgroundColor = '#2ecc71'; // Green
+      } else if (percentage >= 10) {
+        document.getElementById('alert').innerText = "Next Alert at 10% off the flow";
+        waterLevel.style.backgroundColor = '#f1c40f'; // Yellow
+      } else if (percentage <= 10 && percentage > 0) {
+        document.getElementById('alert').innerText = "Alert at 10 and off the flow";
+        waterLevel.style.backgroundColor = '#e74c3c'; // Red
+      } else {
+        document.getElementById('alert').innerText = "Water level is critically low! Show Alert";
+        waterLevel.style.backgroundColor = '#e74c3c'; // Default red
+      }
+      document.getElementById('percentage').innerText = percentage.toFixed(2);
+    }
+    // Function to increase water level
+    // Fetch the data for weight and update water level
+    dataRef2.on('value', function(snapshot) {
+      const weight = (snapshot.val()).toFixed(2);
+      document.getElementById('temperature').textContent = weight + "gram";
+      const maxValue = 400600; // Assuming 2000000 is the maximum value
+      const percentage = (weight / maxValue) * 100;
+      updateWaterLevel(percentage);
+    });
+    // Fetch the data for humidity
+    dataRef1.on('value', function(snapshot) {
+      const humidity = snapshot.val();
+      document.getElementById('humidity').textContent = humidity + "%";
+    });
+    // Fetch the data for weight and update water level
+    dataRef2.on('value', function(snapshot) {
+      const weight = (snapshot.val() / 400600 * 1000).toFixed(2);
+      document.getElementById('temperature').textContent = weight + "gram";
+      // Calculate percentage
+      const maxValue = 1000; // Assuming 2000000 is the maximum value
+      const percentage = (weight / maxValue) * 100;
+      // Update the percentage display
+      document.getElementById('humidity').textContent = percentage.toFixed(1) + "%";
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.bank-offers{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1px ;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin: 50px; 
+    }
+.offer{
+    border: 2px solid #002f6c;
+    border-radius: 10px;
+    padding: 14px;
+    max-width: 300px;
+    text-align: left;
+}
+.offer img{
+   max-width: 100%;
+   height: auto;
+   margin-bottom: 7px;
+
+}
+.offer h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.offer p{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.offer ul{
+    list-style: none;
+    padding: 0;;
+    margin-bottom: 10px;
+}
+.offer ul li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.offer ul li i{
+    color: green;
+    margin-left: 10px;
+}
+.offer button{
+    background-color: #002f6c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 120px;
+    cursor: pointer;
+    padding-right: 115px;
+    
+
+}
+.offer button:hover{
+    background-color: #014a9f;
+}
+
+
+/*.bank-offers {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.offer {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+    text-align: left;
+}
+
+.offer img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.offer h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.offer p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.offer ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.offer ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.offer ul li i {
+    color: green;
+    margin-right: 10px;
+}
+
+.offer button {
+    background-color: #002f6c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.offer button:hover {
+    background-color: #014a9f;
+}
+*/

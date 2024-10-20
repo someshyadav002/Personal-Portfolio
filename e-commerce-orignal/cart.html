@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- cantent will be visible perfect for different screen -->
+	<title>Cart-PUSHP STORE</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon"  href="D:\Sublime Web Development\e-commerce\images\image1.png" type="image/x-icon" ><!--icon  -->
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+		    <div class="navbar">
+		        <div class="log">
+			    <a href="index.html"><img src="D:\Sublime Web Development\e-commerce\images\pmplogo-removebg-preview.png" width="125px"></a>
+		    </div>
+		    <nav>
+			<ul id="MenuItems">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="Products.html">Products</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#about">Contact</a></li>
+				<li><a href="account.html">Account</a></li>
+			</ul>
+		    </nav>
+		    <a href="cart.html"><img src="D:\Sublime Web Development\e-commerce\images\cart.png" width="30px" height="30px"></a>
+		    <img src="D:\Sublime Web Development\e-commerce\images\menu.png" class="menu-icon" onclick="menutoggle()">
+	        </div>
+	    </div>
+	</div>
+<!-- ---cart items details--- -->
+<div class="small-container cart-page">
+	<table>
+		<tr>
+			<th>Product</th>
+			<th>Quantity</th>
+			<th>Subtotal</th>
+		</tr>
+		<tr>
+			<td>
+				<div class="cart-info">
+					<img src="D:\Sublime Web Development\e-commerce\images\buy-1.jpg"s>
+					<div>
+						<p>Red Printed T-Shirt</p>
+						<small>Price: ₹1299/-</small>
+						<br>
+						<a href="">Remove</a>
+					</div>
+				</div>
+			</td>
+			<td><input type="number" value="1"></td>
+			<td>₹1299/-</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="cart-info">
+					<img src="D:\Sublime Web Development\e-commerce\images\buy-2.jpg"s>
+					<div>
+						<p>Adidas Shoes</p>
+						<small>Price: ₹1199/-</small>
+						<br>
+						<a href="">Remove</a>
+					</div>
+				</div>
+			</td>
+			<td><input type="number" value="1"></td>
+			<td>₹1199/-</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="cart-info">
+					<img src="D:\Sublime Web Development\e-commerce\images\exclusive.png">
+					<div>
+						<p>Mi Band 4</p>
+						<small>Price: ₹4199/-</small>
+						<br>
+						<a href="">Remove</a>
+					</div>
+				</div>
+			</td>
+			<td><input type="number" value="1"></td>
+			<td>₹1899/-</td>
+		</tr>
+	</table>
+	<div class="total-price">
+		<table>
+			<tr>
+				<td>Subtotal</td>
+				<td>₹6697/-</td>
+			</tr>
+			<tr>
+				<td>Tax</td>
+				<td>₹200/-</td>
+			</tr>
+			<tr>
+				<td>Total</td>
+				<td>₹6897/-</td>
+
+			</tr>
+			<tr>
+				<td><a href="index.html" class="btn">Buy Now &#8594</a></td>
+			</tr>
+		</table>
+
+	</div>
+</div>
+<!----footer---->
+<div class="footer" id="about">
+	<div class="container">
+		<div class="row">
+			<div class="footer-col-1">
+				<h3>Download Our App</h3>
+				<p>Download app for android and mobile phone</p>
+				<div class="app-logo">
+					<img src="D:\Sublime Web Development\e-commerce\images\app-store.png">
+					<img src="D:\Sublime Web Development\e-commerce\images\play-store.png">
+				</div>
+			</div>
+			<div class="footer-col-2">
+				<img src="D:\Sublime Web Development\e-commerce\images\logo2.jpg">
+				<p>our purpose to Sustainably make the pleaser and benefits of sports accessible to the many.</p>
+			</div>
+			<div class="footer-col-3">
+				<h3>Usefull Links</h3>
+				<ul>
+					<li>Coupons</li>
+					<li>Blog Post</li>
+					<li>Return Policy</li>
+					<li>Join Affiliate</li>
+				</ul>
+			</div>
+			<div class="footer-col-3">
+				<h3>Follow Us</h3>
+				<ul>
+					<li>Instagram</li>
+					<li>Linked In</li>
+					<li>Git Hub</li>
+					<li>Leetcode</li>
+					<li>Youtube</li>
+					<li>M. No. - 9754708724</li>
+					<li>Mail - someshyadav9383@gmail.com</li>
+				</ul>
+			</div>
+		</div>
+		<hr>
+		<p class="copyright"> Copyright 2024 - Somesh Yadav</p>
+	</div>
+</div>
+
+<!-- ------JS for toggle menu -->
+<script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+</body>
+</html>
